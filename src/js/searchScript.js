@@ -1,5 +1,5 @@
 import SearchService from './api-function'
-
+import cardMarkupTpl from '../templates/card-markup.hbs';
 
 const searchService = new SearchService();
 

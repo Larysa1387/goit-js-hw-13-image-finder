@@ -6,13 +6,15 @@ export default class SearchService {
 
   fetchQueryItems() {
     console.log(this);
+    // console.log(this.searchQuery.trim());
     const KEY = '21781686-06f0d55f145dff9dbbb393fb1';
     const BASE_URL = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&key=${KEY}&per_page=12&page=${this.page}`;
-    // console.log(this.searchQuery.trim());
-    fetch(BASE_URL)
+    return fetch(BASE_URL)
       .then(response => response.json())
       .then(data => {
+        // console.log(data); //Нам приходит массив объектов из hits
         this.incrementPage();
+        return data.hits;
       });
   }
 

@@ -1,6 +1,13 @@
 body {
+  min-height: 100vh;
   color: #424242;
   padding: 16px;
+  background: rgb(131,136,136);
+  background-image: linear-gradient(
+    to bottom,
+    pink,
+    rgb(157, 148, 163)
+  );
 }
 
 .search-form {

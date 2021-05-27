@@ -26,10 +26,6 @@ function onSearchClick(e) {
 }
 
 function onLoadMoreBtnClick() {
-  refs.btnLoadMore.scrollIntoView({
-    behavior: 'smooth',
-    block: 'end',
-  });
   console.log('load more');
 
   if (searchService.query.trim() !== '') {
@@ -40,6 +36,10 @@ function onLoadMoreBtnClick() {
 function creatPageMarkup(hits) {
   const cards = cardMarkupTpl(hits);
   refs.cardsList.insertAdjacentHTML('beforeend', cards);
+  refs.cardsList.scrollIntoView({
+    behavior: 'smooth',
+    block: 'end',
+  });
 }
 
 function clearCardsContainer() {

@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass/_search-page.scss"],"names":[],"mappings":"AAAA,KACI,aAAA,CACA,eAAA,CACA,aAGJ,aACE","file":"src.2399b7f0.css","sourceRoot":"../src","sourcesContent":["body {\n    color: #424242;\n    max-width: 960px;\n    padding: 16px;\n}\n\n.search-form{\n  margin-bottom: 40px;\n}\n"]}

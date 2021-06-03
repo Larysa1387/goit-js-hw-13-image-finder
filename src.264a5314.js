@@ -23,4 +23,4 @@ var e,n=arguments[3];!function(t){"object"==typeof exports&&"undefined"!=typeof 
 },{"./api-function":"E52p","../templates/card-markup.hbs":"bIJS","basiclightbox":"BNjD"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/searchScript");
 },{"./sass/main.scss":"clu1","./js/searchScript":"WAP9"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13-image-finder/src.55bb74ea.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder/src.264a5314.js.map

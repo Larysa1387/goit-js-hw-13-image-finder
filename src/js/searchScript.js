@@ -20,8 +20,16 @@ function onSearchClick(e) {
   clearCardsContainer();
 
   if (searchService.query.trim() !== '') {
-    searchService.fetchQueryItems().then(creatPageMarkup);
-    refs.btnLoadMore.classList.remove('is-hidden');
+    searchService.fetchQueryItems()
+      .then(hits => {
+        creatPageMarkup(hits);
+        if (hits.length !== 0) {
+          refs.btnLoadMore.classList.remove('is-hidden');
+        }
+        if (hits.length < 12) {
+          refs.btnLoadMore.classList.add('is-hidden');
+        }
+      });
   }
 }
 

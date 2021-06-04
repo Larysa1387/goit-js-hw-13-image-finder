@@ -1,5 +1,3 @@
-import { onFetchError } from './pnotify-error';
-
 const BASE_URL = 'https://pixabay.com/api';
 const KEY = '21781686-06f0d55f145dff9dbbb393fb1';
 
@@ -19,7 +17,6 @@ export default class SearchService {
       .then(data => {
         // console.log(data); //Нам приходит массив объектов из hits
         const { hits } = data;
-        if (hits.length === 0) { return onFetchError() };
         this.incrementPage();
         return hits;
       });

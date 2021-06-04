@@ -1,6 +1,7 @@
 import SearchService from './api-function'
 import cardMarkupTpl from '../templates/card-markup.hbs';
 import * as basicLightbox from 'basiclightbox';
+import { onFetchError } from './pnotify-error';
 
 const searchService = new SearchService();
 
@@ -22,13 +23,14 @@ function onSearchClick(e) {
   if (searchService.query.trim() !== '') {
     searchService.fetchQueryItems()
       .then(hits => {
-        creatPageMarkup(hits);
+        if (hits.length === 0) { return onFetchError() };
         if (hits.length !== 0) {
           refs.btnLoadMore.classList.remove('is-hidden');
         }
         if (hits.length < 12) {
           refs.btnLoadMore.classList.add('is-hidden');
         }
+        creatPageMarkup(hits);
       });
   }
 }
